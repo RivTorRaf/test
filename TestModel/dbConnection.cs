@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data.SqlClient;
+﻿using System.Data.SqlClient;
 
 namespace TestModel
 {
@@ -17,7 +12,8 @@ namespace TestModel
 
         public void OpenConnection()
         {
-            this.sqlConnection.ConnectionString = "Data Source=LAPTOP-GTUUG201\\SQLEXPRESS;Initial Catalog=TestForms;Integrated Security=True";
+            //this.sqlConnection.ConnectionString = "Data Source=<YOUR PC>\\SQLEXPRESS;Initial Catalog=test;Integrated Security=True";
+            this.sqlConnection.ConnectionString = "Server=tcp:sql-server-test-2021.database.windows.net,1433;Initial Catalog=test;Persist Security Info=False;User ID=admin-test;Password=Password12345!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
             this.sqlConnection.Open();
         }
 
