@@ -34,6 +34,7 @@ namespace TestController
                 {
                     query_string += "where lower(st.names) like '%" + filter + "%' ";
                     query_string += "or lower(st.surnames) like '%" + filter + "%' ";
+                    query_string += "or lower(sc.name) like '%" + filter + "%' ";
                     string date_query = ValidDateQuery(filter);
                     if (!String.IsNullOrEmpty(date_query))
                         query_string += "or st.date_of_birth "+date_query;                   

@@ -50,5 +50,13 @@ namespace TestView
                 this.dataGridView1.Rows.Add(row);
             }
         }
+
+        private void textBox2_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                SearchStudents();
+            }
+        }
     }
 }
